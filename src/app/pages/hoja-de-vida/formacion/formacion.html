@@ -1,1 +1,13 @@
-<p>formacion works!</p>
+
+<div class="card shadow-sm h-100 border-0">
+  <div class="card-body">
+    <h4 class="titulo-seccion">Formación académica</h4>
+
+    <ul>
+      @for (estudio of formacion; track estudio) {
+        <li class="mb-2">{{ estudio }}</li>
+      }
+    </ul>
+  </div>
+</div>
+

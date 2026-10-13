@@ -1,82 +1,38 @@
 
 <div class="container py-5">
 
-  <div class="card shadow-lg border-0 perfil-card mb-4">
-    <div class="card-body p-4 p-md-5 text-center">
-
-      <div class="avatar mx-auto mb-3">
-        {{ hojaDeVida.nombre.charAt(0) }}
-      </div>
-
-      <h1 class="fw-bold">{{ hojaDeVida.nombre }}</h1>
-
-      <h5 class="text-primary mb-3">
-        {{ hojaDeVida.profesion }}
-      </h5>
-
-      <p class="text-secondary mx-auto perfil-texto">
-        {{ hojaDeVida.perfil }}
-      </p>
-
-    </div>
-  </div>
+  <app-perfil
+    [nombre]="hojaDeVida.nombre"
+    [profesion]="hojaDeVida.profesion"
+    [descripcion]="hojaDeVida.perfil">
+  </app-perfil>
 
   <div class="row g-4">
 
     <div class="col-md-6">
-      <div class="card shadow-sm h-100 border-0">
-        <div class="card-body">
-          <h4 class="titulo-seccion">Contacto</h4>
-
-          <p><strong>Correo:</strong> {{ hojaDeVida.correo }}</p>
-          <p><strong>Teléfono:</strong> {{ hojaDeVida.telefono }}</p>
-          <p><strong>Ciudad:</strong> {{ hojaDeVida.ciudad }}</p>
-        </div>
-      </div>
+      <app-contacto
+        [correo]="hojaDeVida.correo"
+        [telefono]="hojaDeVida.telefono"
+        [ciudad]="hojaDeVida.ciudad">
+      </app-contacto>
     </div>
 
     <div class="col-md-6">
-      <div class="card shadow-sm h-100 border-0">
-        <div class="card-body">
-          <h4 class="titulo-seccion">Formación académica</h4>
-
-          <ul>
-            @for (estudio of hojaDeVida.formacion; track estudio) {
-              <li class="mb-2">{{ estudio }}</li>
-            }
-          </ul>
-        </div>
-      </div>
+      <app-formacion
+        [formacion]="hojaDeVida.formacion">
+      </app-formacion>
     </div>
 
     <div class="col-md-6">
-      <div class="card shadow-sm h-100 border-0">
-        <div class="card-body">
-          <h4 class="titulo-seccion">Habilidades</h4>
-
-          <div class="d-flex flex-wrap gap-2">
-            @for (habilidad of hojaDeVida.habilidades; track habilidad) {
-              <span class="badge text-bg-primary p-2">
-                {{ habilidad }}
-              </span>
-            }
-          </div>
-        </div>
-      </div>
+      <app-habilidades
+        [habilidades]="hojaDeVida.habilidades">
+      </app-habilidades>
     </div>
 
     <div class="col-md-6">
-      <div class="card shadow-sm h-100 border-0">
-        <div class="card-body">
-          <h4 class="titulo-seccion">Proyectos realizados</h4>
-
-          <ul>
-            @for (proyecto of hojaDeVida.proyectos; track proyecto) {
-              <li class="mb-2">{{ proyecto }}</li>
-            }
-          </ul>
-        </div>
-      </div>
+      <app-proyectos
+        [proyectos]="hojaDeVida.proyectos">
+      </app-proyectos>
     </div>
 
   </div>

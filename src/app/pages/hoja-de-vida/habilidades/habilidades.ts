@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-habilidades',
+  standalone: true,
   imports: [],
   templateUrl: './habilidades.html',
-  styleUrl: './habilidades.scss',
+  styleUrl: './habilidades.scss'
 })
-export class Habilidades {
-
+export class HabilidadesComponent {
+  @Input() habilidades: string[] = [];
 }

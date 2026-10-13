@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-formacion',
+  standalone: true,
   imports: [],
   templateUrl: './formacion.html',
-  styleUrl: './formacion.scss',
+  styleUrl: './formacion.scss'
 })
-export class Formacion {
-
+export class FormacionComponent {
+  @Input() formacion: string[] = [];
 }
+
