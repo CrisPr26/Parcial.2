@@ -1,0 +1,38 @@
+
+:host {
+  display: block;
+  min-height: 100%;
+  background-color: #f3f7fb;
+}
+
+.encabezado h1 {
+  color: #17365d;
+}
+
+.encabezado p {
+  font-size: 17px;
+}
+
+.tarjeta-tema {
+  border: none;
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-tema:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.icono-tema {
+  font-size: 38px;
+}
+
+.lista-aprendizaje {
+  padding-left: 20px;
+  line-height: 2;
+}
+
+.lista-aprendizaje li::marker {
+  color: #0d6efd;
+}

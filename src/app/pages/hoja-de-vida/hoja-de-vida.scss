@@ -1,0 +1,43 @@
+
+:host {
+  display: block;
+  min-height: 100%;
+  background-color: #f3f7fb;
+}
+
+.perfil-card {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #eaf3ff);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.perfil-texto {
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.titulo-seccion {
+  color: #0d6efd;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.card-body p {
+  overflow-wrap: anywhere;
+}

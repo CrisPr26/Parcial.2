@@ -1,1 +1,85 @@
-<p>aprendizaje works!</p>
+
+<div class="container py-5">
+
+  <div class="encabezado text-center mb-5">
+    <span class="badge text-bg-primary mb-3">
+      Mi proceso académico
+    </span>
+
+    <h1 class="fw-bold">Aprendizaje del curso</h1>
+
+    <p class="text-secondary">
+      Temas, tecnologías y conocimientos adquiridos durante el curso.
+    </p>
+  </div>
+
+  <h3 class="fw-bold mb-4">Temas estudiados</h3>
+
+  <div class="row g-4 mb-5">
+
+    @for (tema of temas; track tema.nombre) {
+      <div class="col-12 col-md-6 col-lg-4">
+
+        <div class="card tarjeta-tema h-100 shadow-sm">
+          <div class="card-body p-4">
+
+            <div class="icono-tema mb-3">
+              {{ tema.icono }}
+            </div>
+
+            <h4 class="fw-bold">{{ tema.nombre }}</h4>
+
+            <p class="text-secondary">
+              {{ tema.descripcion }}
+            </p>
+
+            <span class="badge text-bg-primary">
+              {{ tema.tecnologia }}
+            </span>
+
+          </div>
+        </div>
+
+      </div>
+    }
+
+  </div>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-lg-6">
+      <div class="card tarjeta-tema h-100 shadow-sm">
+        <div class="card-body p-4">
+
+          <h3 class="fw-bold mb-3">Conocimientos adquiridos</h3>
+
+          <ul class="lista-aprendizaje">
+            @for (conocimiento of conocimientos; track conocimiento) {
+              <li>{{ conocimiento }}</li>
+            }
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <div class="card tarjeta-tema h-100 shadow-sm">
+        <div class="card-body p-4">
+
+          <h3 class="fw-bold mb-3">Actividades realizadas</h3>
+
+          <ul class="lista-aprendizaje">
+            @for (actividad of actividades; track actividad) {
+              <li>{{ actividad }}</li>
+            }
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
