@@ -1,0 +1,51 @@
+
+:host {
+  display: block;
+  min-height: 100%;
+  background-color: #f3f7fb;
+}
+
+.encabezado-juegos h1 {
+  color: #17365d;
+}
+
+.encabezado-juegos p {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.etiqueta-categoria {
+  padding: 10px 14px;
+  border-radius: 20px;
+  background-color: #dbeafe;
+  color: #174a8b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tarjeta-juego {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-juego:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.icono-juego {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  font-size: 55px;
+}
+
+.mensaje-final {
+  color: #17365d;
+  font-weight: 500;
+}
